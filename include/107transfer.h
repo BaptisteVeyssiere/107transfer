@@ -5,12 +5,26 @@
 ** Login   <VEYSSI_B@epitech.net>
 **
 ** Started on  Mon Feb 29 15:57:12 2016 Baptiste veyssiere
-** Last update Mon Feb 29 15:58:40 2016 Baptiste veyssiere
+** Last update Mon Feb 29 16:08:47 2016 nathan scutari
 */
 
-#ifndef 107transfer
-# define 107transfer
+#ifndef TRANSFER_H_
+# define TRANSFER_H_
 
 # include <math.h>
 
-#endif /* !107transfer */
+typedef struct
+{
+  int	nbr;
+  int	den;
+  int	*nbrs;
+  int	*dens;
+}
+
+typedef struct
+{
+  int	args;
+  t_component	*comp;
+}		t_args;
+
+#endif /* !TRANSFER_H_ */

@@ -5,12 +5,12 @@
 ## Login   <VEYSSI_B@epitech.net>
 ##
 ## Started on  Mon Feb 29 15:55:18 2016 Baptiste veyssiere
-## Last update Mon Feb 29 15:57:30 2016 Baptiste veyssiere
+## Last update Mon Feb 29 16:04:11 2016 nathan scutari
 ##
 
 NAME	= 107transfer
 
-SRCS	= 107transfer.c
+SRCS	= src/107transfer.c
 
 OBJS	= $(SRCS:.c=.o)
 

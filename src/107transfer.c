@@ -5,7 +5,7 @@
 ** Login   <VEYSSI_B@epitech.net>
 **
 ** Started on  Mon Feb 29 15:59:00 2016 Baptiste veyssiere
-** Last update Mon Feb 29 17:07:30 2016 nathan scutari
+** Last update Mon Feb 29 17:09:19 2016 nathan scutari
 */
 
 #include "107transfer.h"
@@ -100,5 +100,4 @@ int	main(int ac, char **av)
   if ((comp = get_components(ac, av)) == NULL)
     return (84);
   calc(comp);
-  return (0);
 }

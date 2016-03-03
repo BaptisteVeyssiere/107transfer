@@ -5,7 +5,7 @@
 ** Login   <VEYSSI_B@epitech.net>
 **
 ** Started on  Mon Feb 29 15:59:00 2016 Baptiste veyssiere
-** Last update Mon Feb 29 18:31:36 2016 nathan scutari
+** Last update Thu Mar  3 10:59:35 2016 Baptiste veyssiere
 */
 
 #include "107transfer.h"
@@ -95,6 +95,11 @@ int	main(int ac, char **av)
   t_args	*comp;
 
   comp = NULL;
+  if (ac == 2 && av[1][0] == '-' && av[1][1] == 'h' && av[1][2] == 0)
+    {
+      printf("USAGE\n           ./107transfer [num den]*\n\nDESCRIPTION\n           num  polynomial numerator defined by its coeficients\n           den  polynomial denominator defined by its coeficients\n");
+      return (0);
+    }
   if (ac % 2 != 1 || ac < 2)
     return (84);
   if ((comp = get_components(ac, av)) == NULL)

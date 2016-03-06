@@ -5,7 +5,7 @@
 ** Login   <VEYSSI_B@epitech.net>
 **
 ** Started on  Mon Feb 29 15:59:00 2016 Baptiste veyssiere
-** Last update Mon Feb 29 18:31:36 2016 nathan scutari
+** Last update Mon Feb 29 18:50:39 2016 nathan scutari
 */
 
 #include "107transfer.h"
@@ -96,9 +96,9 @@ int	main(int ac, char **av)
 
   comp = NULL;
   if (ac % 2 != 1 || ac < 2)
-    return (84);
+    return (my_perror("Invalid number of arguments\n", 84));
   if ((comp = get_components(ac, av)) == NULL)
-    return (84);
+    return (my_perror("Error while loading arguments\n", 84));
   calc(comp);
   return (0);
 }

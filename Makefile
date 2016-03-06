@@ -5,33 +5,34 @@
 ## Login   <VEYSSI_B@epitech.net>
 ##
 ## Started on  Mon Feb 29 15:55:18 2016 Baptiste veyssiere
-## Last update Mon Feb 29 16:10:02 2016 Baptiste veyssiere
+## Last update Mon Feb 29 18:40:08 2016 nathan scutari
 ##
 
-NAME	= 107transfer
+NAME	= 	107transfer
 
-SRCS	= src/107transfer.c	\
-	src/calc.c
+SRCS	= 	src/107transfer.c	\
+		src/error.c		\
+		src/calc.c
 
-OBJS	= $(SRCS:.c=.o)
+OBJS	= 	$(SRCS:.c=.o)
 
-RM	= rm -f
+RM	=	 rm -f
 
-CC	= gcc
+CC	= 	gcc
 
-LDFLAGS	= -lm
+LDFLAGS	= 	-lm
 
-CFLAGS	= -I./include
+CFLAGS	= 	-I./include
 
-$(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
+$(NAME): 	$(OBJS)
+		$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
-all: $(NAME)
+all: 		$(NAME)
 
 clean:
-	$(RM) $(OBJS)
+		$(RM) $(OBJS)
 
-fclean: clean
-	$(RM) $(NAME)
+fclean: 	clean
+		$(RM) $(NAME)
 
-re: fclean all
+re: 		fclean all

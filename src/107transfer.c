@@ -5,7 +5,7 @@
 ** Login   <VEYSSI_B@epitech.net>
 **
 ** Started on  Mon Feb 29 15:59:00 2016 Baptiste veyssiere
-** Last update Mon Feb 29 18:50:39 2016 nathan scutari
+** Last update Sun Mar  6 21:51:52 2016 nathan scutari
 */
 
 #include "107transfer.h"
@@ -83,6 +83,8 @@ t_args	*get_components(int ac, char **av)
     return (NULL);
   while (++x < ac)
     {
+      if (av[x][0] == 0 || av[x + 1][0] == 0)
+	return (NULL);
       if (get_spec_comp(x, x + 1, av, &arg->comp[++compo]) == -1)
 	return (NULL);
       ++x;
@@ -95,6 +97,11 @@ int	main(int ac, char **av)
   t_args	*comp;
 
   comp = NULL;
+  if (ac == 2 && av[1][0] == '-' && av[1][1] == 'h' && av[1][2] == 0)
+    {
+      printf("USAGE\n           ./107transfer [num den]*\n\nDESCRIPTION\n           num  polynomial numerator defined by its coeficients\n           den  polynomial denominator defined by its coeficients\n");
+      return (0);
+    }
   if (ac % 2 != 1 || ac < 2)
     return (my_perror("Invalid number of arguments\n", 84));
   if ((comp = get_components(ac, av)) == NULL)

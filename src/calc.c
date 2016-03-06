@@ -5,7 +5,7 @@
 ** Login   <VEYSSI_B@epitech.net>
 **
 ** Started on  Mon Feb 29 16:09:40 2016 Baptiste veyssiere
-** Last update Thu Mar  3 11:08:29 2016 Baptiste veyssiere
+** Last update Sun Mar  6 21:55:12 2016 nathan scutari
 */
 
 #include "107transfer.h"
@@ -46,7 +46,7 @@ void	calc_for_x(t_args *args, double x)
   i = -1;
   while (++i < args->args)
     result *= polynomial_resolution(args->comp[i], x);
-  printf("%.3g-> %.5f\n", x, result);
+  printf("%.3g -> %.5f\n", x, result);
 }
 
 void	calc(t_args *args)
